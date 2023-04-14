@@ -1,3 +1,4 @@
 dotnet new webapi -n <project name>
 dotnet add package <package name>
 dotnet add <project name> package <package name>
+dotnet build
