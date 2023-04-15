@@ -1,0 +1,12 @@
+build container/image:
+  docker build -t <your docker hub id>/platformserivce .
+run image with new container:
+  docker run -p 8080:80 -d jamespagedev/platformserivce
+show running images:
+  docker ps
+stop docker image:
+  docker stop <container id>
+start existing docker image:
+  docker start <container id>
+push image to hub:
+  docker push jamespagedev/platformserivce

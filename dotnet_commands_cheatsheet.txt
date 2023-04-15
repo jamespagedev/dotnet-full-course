@@ -1,6 +1,7 @@
 dotnet new webapi -n <project name>
 dotnet add package <package name>
 dotnet add <project name> package <package name>
+dotnet restore
 dotnet build
 dotnet run
 dotnet dev-certs https --check --verbose
