@@ -5,3 +5,4 @@ kubectl get deployments
 kubectl get pods
 destroy container:
   kubectl delete deployment <deployment name>
+kubectl get services
