@@ -51,7 +51,7 @@ namespace PlatformService
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PlatformService v1"));
             }
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection(); // removes https warning in docker command window pod. Setup later...
 
             app.UseRouting();
 

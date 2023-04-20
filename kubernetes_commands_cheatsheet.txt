@@ -6,3 +6,5 @@ kubectl get pods
 destroy container:
   kubectl delete deployment <deployment name>
 kubectl get services
+refresh deployment:
+  kubectl rollout restart deployment <deployment name>
