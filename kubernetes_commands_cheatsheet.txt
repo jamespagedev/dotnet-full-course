@@ -8,3 +8,10 @@ destroy container:
 kubectl get services
 refresh deployment:
   kubectl rollout restart deployment <deployment name>
+ingress-nginx:
+  load balancer:
+    kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.7.0/deploy/static/provider/aws/deploy.yaml
+kubectl get namespace
+kubectl get pods --namespace=ingress-nginx
+kubectl get services --namespace=ingress-nginx
+kubectl get deployments --namespace=ingress-nginx

@@ -39,7 +39,7 @@
 			"name": "K8S",
 			"item": [
 				{
-					"name": "Platform Service",
+					"name": "Platform Service (Node Port)",
 					"item": [
 						{
 							"name": "Get All Platforms",
@@ -60,6 +60,60 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Create Platform",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Docker\",\r\n    \"publisher\": \"Docker\",\r\n    \"cost\": \"Free\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:31430/api/platforms",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "31430",
+									"path": [
+										"api",
+										"platforms"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Platform Service (Nginx)",
+					"item": [
+						{
+							"name": "Get All Platforms",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://jamespagedev-ingress-srv.com/api/platforms",
+									"protocol": "http",
+									"host": [
+										"jamespagedev-ingress-srv",
+										"com"
+									],
+									"path": [
+										"api",
+										"platforms"
+									]
+								}
+							},
+							"response": []
 						}
 					]
 				}
@@ -69,7 +123,7 @@
 			"name": "Local Dev",
 			"item": [
 				{
-					"name": "PlatformService",
+					"name": "Platform Service",
 					"item": [
 						{
 							"name": "Platforms List",
@@ -135,6 +189,32 @@
 									"port": "5000",
 									"path": [
 										"api",
+										"platforms"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Commands Service",
+					"item": [
+						{
+							"name": "Test Inbound Connection",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6000/api/c/platforms",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"api",
+										"c",
 										"platforms"
 									]
 								}
