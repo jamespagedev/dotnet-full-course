@@ -15,3 +15,5 @@ kubectl get namespace
 kubectl get pods --namespace=ingress-nginx
 kubectl get services --namespace=ingress-nginx
 kubectl get deployments --namespace=ingress-nginx
+kubectl get storageclass
+kubectl get pvc
