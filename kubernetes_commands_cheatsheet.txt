@@ -17,3 +17,4 @@ kubectl get services --namespace=ingress-nginx
 kubectl get deployments --namespace=ingress-nginx
 kubectl get storageclass
 kubectl get pvc
+kubectl create secret generic mssql --from-literal=SA_PASSWORD="<your password>"
